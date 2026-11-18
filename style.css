@@ -1,0 +1,318 @@
+/* ==========================================================================
+   DINK HUB CO. - HOMEPAGE DESIGN SYSTEM
+   Colors:
+   - Electric Neon Lime: #A3E635
+   - Deep Carbon Graphite: #0F172A / #1E293B
+   - Pure Court White: #FFFFFF
+   - Court Blue Accent: #0284C7
+   - Muted Slate Grey: #64748B
+   ========================================================================== */
+
+:root {
+    --lime: #A3E635;
+    --lime-hover: #84CC16;
+    --graphite: #0F172A;
+    --graphite-card: #1E293B;
+    --white: #FFFFFF;
+    --court-blue: #0284C7;
+    --slate: #64748B;
+    --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--graphite);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+h1, h3 {
+    font-family: var(--font-heading);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-sm {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.82rem;
+}
+
+.btn-primary {
+    background-color: var(--lime);
+    color: var(--graphite);
+}
+
+.btn-primary:hover {
+    background-color: var(--lime-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(163, 230, 53, 0.35);
+}
+
+.btn-outline {
+    border: 1.5px solid var(--slate);
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: var(--lime);
+    color: var(--lime);
+}
+
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: var(--lime);
+    margin-left: 4px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--lime);
+}
+
+/* Hero Banner */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, #1E293B 0%, var(--graphite) 70%);
+    padding: 4.5rem 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(163, 230, 53, 0.14);
+    color: var(--lime);
+    border: 1px solid rgba(163, 230, 53, 0.4);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+    font-size: 3.15rem;
+    font-weight: 900;
+    margin-bottom: 1.25rem;
+}
+
+.hero p {
+    color: #CBD5E1;
+    font-size: 1.08rem;
+    margin-bottom: 2rem;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.75rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+}
+
+.hero-stats strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--lime);
+}
+
+.hero-stats span {
+    font-size: 0.82rem;
+    color: #94A3B8;
+}
+
+/* Flagship Showcase Card */
+.hero-card-mockup {
+    background: var(--graphite-card);
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mockup-tag {
+    color: var(--lime);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.paddle-preview-box {
+    height: 170px;
+    background: linear-gradient(145deg, #0F172A, #1E293B);
+    border: 1px dashed var(--slate);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--lime);
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+.hero-card-mockup h3 {
+    font-size: 1.55rem;
+    margin-bottom: 0.65rem;
+}
+
+.hero-card-mockup p {
+    font-size: 0.94rem;
+    color: #CBD5E1;
+    margin-bottom: 0;
+}
+
+.mockup-price {
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.mockup-price span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #94A3B8;
+    margin-left: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    color: #94A3B8;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #CBD5E1;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--lime);
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+}
